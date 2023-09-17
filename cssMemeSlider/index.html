@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <title>CssMemeSlider</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="visually-hidden">cssMemeSlider</h1>
+    </header>
+    <main class="main-content container">
+        <form class="slider">
+
+            <input type="radio" name="slide" id="slide1" checked>
+            <input type="radio" name="slide" id="slide2">
+            <input type="radio" name="slide" id="slide3">
+            <input type="radio" name="slide" id="slide4">
+
+            <div class="carousel">
+                <div class="overflow">
+                    <div class="inner">
+                        <div class="img-content">
+                            <img class="image" src="assets/images/city.jpg" alt="City image" width="1200" height="800">
+                        </div>
+                        <div class="img-content">
+                            <img class="image" src="assets/images/earth.jpg" alt="Earth image" width="1200"
+                                height="800">
+                        </div>
+                        <div class="img-content">
+                            <img class="image" src="assets/images/nature.jpg" alt="Nature image" width="1200"
+                                height="800">
+                        </div>
+                        <div class="img-content">
+                            <img class="image" src="assets//images/water.jpg" alt="Water image" width="1200"
+                                height="800">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dots-wrap">
+                <div class="slider-labels">
+                    <label title="City" for="slide1">
+                        <span id="dot1"></span>
+                    </label>
+                    <label title="Earth" for="slide2">
+                        <span id="dot2"></span>
+                    </label>
+                    <label title="Nature" for="slide3">
+                        <span id="dot3"></span>
+                    </label>
+                    <label title="Water" for="slide4">
+                        <span id="dot4"></span>
+                    </label>
+                </div>
+
+
+                <div class="carousel carusel-cptn">
+                    <div class="overflow">
+                        <div class="inner">
+                            <div class="img-content">
+                                <p class="img-caption">I'm best of the best!</p>
+                            </div>
+                            <div class="img-content">
+                                <p class="img-caption">I'm best of the best of the best!!!</p>
+                            </div>
+                            <div class="img-content">
+                                <p class="img-caption">Keep going... I believe in you!</p>
+                            </div>
+                            <div class="img-content">
+                                <p class="img-caption">Don't stop!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </main>
+    <footer></footer>
+</body>
+
+</html>

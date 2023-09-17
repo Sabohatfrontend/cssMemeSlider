@@ -1,0 +1,232 @@
+/* GLOBAL */
+:root {
+    --bg-color: #25282a;
+    --text-color: #fff;
+    --button-color: #71abff;
+    --outline-color: var(--brand-color);
+    --site-font: "Arial", sans-serif;
+}
+
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+*:focus {
+    outline: 2px dashed var(--outline-color);
+    outline-offset: 3px;
+}
+
+body {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    font-family: var(--site-font);
+    font-size: 24px;
+    line-height: 1;
+    height: 100%;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* CONTAINER */
+.container {
+    width: 100%;
+    max-width: 1400px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 4%;
+}
+
+.slider {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1200px;
+    width: 100%;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+.inner {
+    width: 400%;
+    display: flex;
+    transition: margin-left 500ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    line-height: 0;
+}
+
+#slide1:checked~.carousel .inner,
+#slide1:checked~.dots-wrap .carousel .inner {
+    margin-left: 0;
+}
+
+#slide2:checked~.dots-wrap .carousel .inner,
+#slide2:checked~.carousel .inner {
+    margin-left: -100%;
+}
+
+#slide3:checked~.dots-wrap .carousel .inner,
+#slide3:checked~.carousel .inner {
+    margin-left: -200%;
+}
+
+#slide4:checked~.dots-wrap .carousel .inner,
+#slide4:checked~.carousel .inner {
+    margin-left: -300%;
+}
+
+.img-content {
+    width: 25%;
+    border-radius: 20px;
+}
+
+.image {
+    object-fit: cover;
+    border-radius: 1%;
+}
+
+.slider-labels {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.slider-labels label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.slider-labels label:hover span {
+    --button-color: #fff;
+}
+
+.slider-labels label:active span {
+    opacity: 0.6;
+}
+
+.slider-labels span {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--button-color);
+}
+
+#slide1:checked~.dots-wrap .slider-labels #dot1,
+#slide2:checked~.dots-wrap .slider-labels #dot2,
+#slide3:checked~.dots-wrap .slider-labels #dot3,
+#slide4:checked~.dots-wrap .slider-labels #dot4 {
+    border: 3px solid var(--button-color);
+    background-color: transparent;
+}
+
+.carusel-cptn {
+    width: 70%;
+}
+
+.img-caption {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding: 0;
+}
+
+.dots-wrap {
+    display: flex;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 768px) {
+    .carusel-cptn {
+        width: 100%;
+        transition: width 0.5s linear;
+        animation-name: text-animation;
+        animation-duration: 1s;
+    }
+
+    @keyframes text-animation {
+        from {
+            width: 75%;
+        }
+
+        to {
+            width: 100%;
+        }
+    }
+
+    .slider-labels {
+        margin: 0 auto 20px;
+        transition: margin 0.5s ease;
+        animation-name: label-animation;
+        animation-duration: 1s;
+    }
+
+    @keyframes label-animation {
+0%{
+    margin: 0;
+}
+50%{
+    margin: 0 0 20px;
+}
+100%{
+    margin: 0 auto 20px;
+}
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    body {
+        font-size: 16px;
+    }
+
+    .img-caption {
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+    .slider-labels span {
+        width: 16px;
+        height: 16px;
+    }
+}
