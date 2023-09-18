@@ -14,10 +14,10 @@ html {
 }
 
 .visually-hidden {
-display: none;
+    display: none;
 }
 
-*{
+* {
     box-sizing: border-box;
 }
 
@@ -148,7 +148,7 @@ input[type=radio] {
 #slide2:checked~.dots-wrap .slider-labels #dot2,
 #slide3:checked~.dots-wrap .slider-labels #dot3,
 #slide4:checked~.dots-wrap .slider-labels #dot4 {
-    border: 3px solid var(--button-color);
+    border: 0.15em solid var(--button-color);
     background-color: transparent;
 }
 
@@ -196,15 +196,17 @@ input[type=radio] {
     }
 
     @keyframes label-animation {
-0%{
-    margin: 0;
-}
-50%{
-    margin: 0 0 1.25em;
-}
-100%{
-    margin: 0 auto 1.25em;
-}
+        0% {
+            margin: 0;
+        }
+
+        50% {
+            margin: 0 0 1.25em;
+        }
+
+        100% {
+            margin: 0 auto 1.25em;
+        }
     }
 }
 
